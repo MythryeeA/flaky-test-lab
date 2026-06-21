@@ -1,9 +1,10 @@
-import random
-
+import time
 
 def test_payment():
 
-    if random.random() < 0.3:
+    current_second = int(time.time())
+
+    if current_second % 2 == 0:
         raise TimeoutError(
             "Payment API timeout"
         )
