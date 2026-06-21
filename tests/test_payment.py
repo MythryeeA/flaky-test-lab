@@ -1,4 +1,9 @@
 import random
 
+
 def test_payment():
-    assert random.random() > 0.3
+
+    if random.random() < 0.3:
+        raise TimeoutError(
+            "Payment API timeout"
+        )
